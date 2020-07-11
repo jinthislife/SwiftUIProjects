@@ -67,6 +67,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Total Amount")) {
                     Text("$\(totalAmount, specifier: "%.2f")")
+                        .foregroundColor(tipPercentages[tipPercentage] == 0 ? .red : .primary)
                 }
                 
             }
