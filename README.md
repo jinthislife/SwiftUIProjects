@@ -9,3 +9,6 @@ HStack, VStack, ZStack, Buttons and Images, Alert, Gradients,
 
 ## Project4 - BetterRest
 DatePicker, Picker, Stepper, navigationBarItems(), Date, DateComponents, DateFormatter, Create ML and CoreML
+
+## Project5 - Word Scramble
+List, onAppear, Bundle, fatalError(), UITextChecker with little bit of unicode info
