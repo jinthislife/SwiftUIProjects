@@ -10,40 +10,34 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var username = ""
-    @State private var email = ""
     @ObservedObject var order = Order()
-    
-    var disableForm: Bool {
-        username.count < 5 || email.count < 5
-    }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Picker("Select your cake type", selection: $order.type) {
+                    Picker("Select your cake type", selection: $order.s.type) {
                         ForEach(0..<Order.types.count, id: \.self) {
                             Text(Order.types[$0])
                         }
                     }
                     
-                    Stepper(value: $order.quantity, in: 3...20) {
-                        Text("Number of cakes: \(order.quantity)")
+                    Stepper(value: $order.s.quantity, in: 3...20) {
+                        Text("Number of cakes: \(order.s.quantity)")
                     }
                 }
                 
                 Section {
-                    Toggle(isOn: $order.specialRequestEnabled.animation()) {
+                    Toggle(isOn: $order.s.specialRequestEnabled.animation()) {
                         Text("Any special requests?")
                     }
                     
-                    if order.specialRequestEnabled {
-                        Toggle(isOn: $order.extraFrosting) {
+                    if order.s.specialRequestEnabled {
+                        Toggle(isOn: $order.s.extraFrosting) {
                             Text("Add extra frosting")
                         }
                         
-                        Toggle(isOn: $order.addSprinkles) {
+                        Toggle(isOn: $order.s.addSprinkles) {
                             Text("Add extra sprinkles")
                         }
                     }
