@@ -18,3 +18,21 @@ List, onAppear, Bundle, fatalError(), UITextChecker with little bit of unicode i
 
 ## Project6 - Animation
 > This technique project will be covered later.
+
+## Project7 - iExpenses
+- To monitor class model changes across more than one view
+- @ObservedObject, @Published, ObservableObject
+- model presentation using sheet()
+- deleting items from list using onDelete()
+- UserDefaults.standard read/write
+- Identifiable protocol
+- JSON Decoder, Encoder to archive structs to store UserDefaults
+
+## Project8 - Moonshot
+- resize images to fit the screen width using GeometryReader
+- ScrollView
+- NavigationLink
+- write a generic decode method as an Extension of Bundle
+- convert Json date string to Date type, Formatting Date type to date string to display using DateFormatter
+- an array method first(where:) to create new models from two different models
+
